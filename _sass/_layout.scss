@@ -13,11 +13,11 @@ html {
 }
 
 .visual{
-    display: block!important;
+    display: none!important;
 }
 
 .noVisual{
-    display: none!important;
+    display: block!important;
 }
 
 
@@ -38,7 +38,7 @@ $lapDuration: 3s;
     position: fixed;
     top:0;
     left: 0;
-    z-index: 3;
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,7 +180,8 @@ section{
   //   background-color: #000;
   
       #vacayLogo{
-          width: 100%;
+          // width: 100%;
+          width: 500px;
           margin-top:200px; 
   
       }
@@ -206,7 +207,7 @@ section{
           position: absolute;
           z-index: -1;
       /*not work if the screen ratio is below 16/9*/
-          width:100%;     
+          width:50%;     
           height: auto;
           margin: auto;
           margin-top:50px;
@@ -417,8 +418,8 @@ section{
             box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
           }
           
-          .flickity-prev-next-button.previous { left: 40px; }
-          .flickity-prev-next-button.next { right: 40px; }
+          .flickity-prev-next-button.previous { left: 400px!important; }
+          .flickity-prev-next-button.next { right: 400px!important; }
           /* right to left */
           .flickity-rtl .flickity-prev-next-button.previous {
             left: auto;
@@ -569,25 +570,26 @@ section{
     }
 
 
-@media (min-width: 750px) {
+@media (max-width: 750px) {
     .visual{
-        display: none!important;
-    }
-
-    .noVisual{
         display: block!important;
     }
 
+    .noVisual{
+        display: none!important;
+    }
+
     
-    .flickity-prev-next-button.previous { left: 35%!important; }
-    .flickity-prev-next-button.next { right: 35%!important; }
+
 #introPage{
 //   height: 100vh;
 //   width: 100%;
 // //   background-color: #000;
 
     #vacayLogo{
-        width: 500px;
+        width: 100%;
+        height: 100%;
+        // width: 30vh;
 
     }
 
@@ -604,17 +606,49 @@ section{
 //         position: absolute;
 //         z-index: -1;
 //     /*not work if the screen ratio is below 16/9*/
-        width:60%;     
-//         height: auto;
+        width:100%;     
+        // height: 100%;
 //         margin: auto;
-//         margin-top:5%;
+        margin-top:35%;
 //         left: 0;
 //         right: 0;
     }
 
 }
 
+
+#brands{
+    
+  width: 100%;
+  background-color: #222831;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding-bottom:100px; 
+  #grad{
+      position: absolute;
+      height: 450px;
+      width: 300px;
+      background-image: none;
+      z-index: 1;
+      left: 5%;
+      margin-top: 20px;
+    }
+
+    #grad2{
+      position: absolute;
+      height: 450px;
+      width: 300px;
+      background-image: none;
+      z-index: 1;
+      right: 5%;
+      margin-top: 20px;
+    }
+    .flickity-prev-next-button.previous { left: 40px!important; }
+    .flickity-prev-next-button.next { right: 40px!important; }
+  }
 // #brands{
+
+  
     
 //     width: 100%;
 //     background-color: #fff;
@@ -726,20 +760,18 @@ section{
 
 }
 
-#contact{
-//     height: 70vh;
-//     background-color: #161515;
-//     color: #fff;
-    h1{
-        z-index: 1;
-    }
-    #legs{
+// #contact{
 
-        display: block;
-        height: 450px;
-        position: absolute;
-        left: 0;
-    }
+//     h1{
+//         z-index: 1;
+//     }
+//     #legs{
+
+//         display: block;
+//         height: 450px;
+//         position: absolute;
+//         left: 0;
+//     }
 //     input{
 //         background: none;
 //         margin-top: 40px;
@@ -779,7 +811,7 @@ section{
 //       ::-ms-input-placeholder { /* Microsoft Edge */
 //         color: white;
 //       }
-}
+// }
 
 footer{
     height: 30vh;
@@ -799,15 +831,18 @@ footer{
 // }
 
 .header {
-	position: relative;
-	display: block;
-  padding: 10px;
-  padding-bottom: 20px;
-	line-height: 24px;
-	font-size: 16px;
-	font-weight: bold;
+	position: fixed;
+	// display: block;
+  // padding: 5px;
+  // padding-bottom: 20px;
+	// line-height: 24px;
+	// font-size: 16px;
+  // font-weight: bold;
+  top: 0;
 	color: #fff;
-	background: #000;
+  background: #000;
+  z-index: 5;
+  transition: top 0.3s
 }
 
 .header #hamNav {

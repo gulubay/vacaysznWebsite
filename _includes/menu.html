@@ -22,18 +22,16 @@
 
     <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">HOME</a>
-            <a href="#brands">BRANDS</a>
-            <a href="#videos">VIDEOS</a>
-            <a href="#contact">CONTACT</a>
+            <a onclick="closeNav()" href="#">HOME</a>
+            <a onclick="closeNav()" href="#brands">BRANDS</a>
+            <a onclick="closeNav()" href="#videos">VIDEOS</a>
+            <a onclick="closeNav()" href="#contact">CONTACT</a>
     </div>
               
-    <div class="header" style="padding-bottom: 0px; text-align:right;">
-        <!-- <img src="images/favicon-32x32-2.png" alt="" style="height:20px;"> -->
-    </div>
+   
 
-<div class="header sticky container-fluid justify-content-center visual">
-    <a style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</a>
+<div id="mobileNav" class="header sticky container-fluid justify-content-center visual">
+    <a style="font-size:45px;cursor:pointer" onclick="openNav()">&#9776;</a>
      <!-- <a class="col-2">HOME</a>
     <a class="col-2">BRANDS</a>
     <a class="col-2">VIDEOS</a>

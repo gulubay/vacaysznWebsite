@@ -1,3 +1,17 @@
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("mobileNav").style.top = "0";
+  } else {
+    document.getElementById("mobileNav").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
+
+
 $(document).ready(function() {
     $(document).scroll(function(e){
         opacidade();
@@ -45,3 +59,5 @@ window.scroll({
     left: 0, 
     behavior: 'smooth'
   });
+
+  
